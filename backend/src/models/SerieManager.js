@@ -1,11 +1,11 @@
 const AbstractManager = require("./AbstractManager");
 
-class ItemManager extends AbstractManager {
+class SerieManager extends AbstractManager {
   static table = "serie";
 
   insert(serie) {
     return this.connection.query(
-      `insert into ${ItemManager.table} (title, release_date, country, picture, rate, genre) values (?, ? , ? , ? , ?, ?)`,
+      `insert into ${SerieManager.table} (title, release_date, country, picture, rate, genre) values (?, ? , ? , ? , ?, ?)`,
       [
         serie.title,
         serie.release_date,
@@ -19,7 +19,7 @@ class ItemManager extends AbstractManager {
 
   update(serie) {
     return this.connection.query(
-      `update ${ItemManager.table} set title = ?, release_date = ?, country = ?, picture = ?, rate = ?, genre = ? where id = ?`,
+      `update ${SerieManager.table} set title = ?, release_date = ?, country = ?, picture = ?, rate = ?, genre = ? where id = ?`,
       [
         serie.title,
         serie.release_date,
@@ -33,4 +33,4 @@ class ItemManager extends AbstractManager {
   }
 }
 
-module.exports = ItemManager;
+module.exports = SerieManager;
