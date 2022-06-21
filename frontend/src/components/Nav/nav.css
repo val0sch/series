@@ -1,0 +1,7 @@
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  gap: 5em;
+}

@@ -1,0 +1,12 @@
+.card img {
+  width: 90%;
+}
+
+.card {
+  background-color: rgb(55, 51, 47);
+  max-width: 20rem;
+  border-radius: 1em;
+  text-align: center;
+  padding: 0.2rem;
+  margin: 1rem auto;
+}

@@ -1,13 +1,13 @@
 const express = require("express");
 
-const { ItemController } = require("./controllers");
+const { SerieController } = require("./controllers");
 
 const router = express.Router();
 
-router.get("/items", ItemController.browse);
-router.get("/items/:id", ItemController.read);
-router.put("/items/:id", ItemController.edit);
-router.post("/items", ItemController.add);
-router.delete("/items/:id", ItemController.delete);
+router.get("/api/series", SerieController.browse);
+router.get("/api/series/:id", SerieController.read);
+router.put("/api/series/:id", SerieController.edit);
+router.post("/api/series", SerieController.add);
+router.delete("/api/series/:id", SerieController.delete);
 
 module.exports = router;
